@@ -68,7 +68,8 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 			user.setPassword("pass");
 			User newUser = this.save(user);
 			System.out.println(newUser);			
-		}		
+		}
+		System.out.println("yklee pass encode : " + passwordEncoder.encode("yklee-password"));
 	}
 
 	@Override

@@ -1,14 +1,0 @@
-spring:
-  profiles: real
-  
-  datasource:    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3000/SpringReal?serverTimezone=UTC&characterEncoding=UTF-8
-    username: root
-    password: Ali9411&&
-        
-  jpa:
-    hibernate:
-      ddl-auto: update
-    generate-ddl: true
-    database: MYSQL
-    show-sql: true

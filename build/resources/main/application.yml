@@ -1,7 +1,28 @@
 spring:
-  profiles: real
+  profiles: dev
+
+  datasource:
+    initialization-mode: always    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://52.78.102.56:3000/SpringDev?serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: Ali9411&&
+        
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    database: MYSQL
+    show-sql: true
+      output:    ansi:      enabled: always
+      
+logging:
+  file: ./springbootdemo.log---
+spring:
+  profiles: prod
   
-  datasource:    driver-class-name: com.mysql.cj.jdbc.Driver
+  datasource:
+    initialization-mode: always
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3000/SpringReal?serverTimezone=UTC&characterEncoding=UTF-8
     username: root
     password: Ali9411&&
@@ -12,3 +33,10 @@ spring:
     generate-ddl: true
     database: MYSQL
     show-sql: true
+    
+  output:
+    ansi:
+      enabled: always
+      
+logging:
+  file: /var/log/tomcat/springbootdemo.log
